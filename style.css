@@ -5,7 +5,18 @@
   font-family: 'Arial', sans-serif;
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* header on top, hero fills rest */
+}
+
+/* Header */
 header {
+  flex: 0 0 auto;
   width: 100%;
   padding: 15px 60px;
   border-bottom: 1px solid #eee;
@@ -48,14 +59,14 @@ nav ul li a:hover {
   font-weight: bold;
   cursor: pointer;
   font-size: 28px;
-
 }
 
+/* Hero */
 .hero {
+  flex: 1; /* fills remaining viewport */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh; /* Full screen */
   padding: 0 60px;
   background-color: #fff;
 }
